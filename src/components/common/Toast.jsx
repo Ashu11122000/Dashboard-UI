@@ -1,5 +1,5 @@
 import { X, CheckCircle, AlertCircle, AlertTriangle, Info } from "lucide-react";
-import { useToastContext } from "../../context/ToastContext";
+import useToastContext from "../../hooks/useToastContext";
 
 const toastStyles = {
   success: {
