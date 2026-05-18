@@ -1,25 +1,37 @@
-I am building a capstone frontend project using **ReactJS + Vite + TailwindCSS + JavaScript + HTML5**.
+# SaaS Dashboard Web Application
 
-Project idea: **SaaS Dashboard Web Application** that combines all assignment requirements into one professional project.
+A capstone frontend project built using **ReactJS, Vite, TailwindCSS, JavaScript, and HTML5**.
 
-Assignment requirements:
+This project combines multiple frontend assignment requirements into one professional SaaS dashboard application.
 
-* Responsive hero section + navigation bar
-* Multi-card product/team display
-* Fully styled login/signup form
-* Complex responsive pricing table
-* Dark mode feature using theme classes
-* Standard application dashboard layout
-* Custom alert/notification component with transitions
+## Project Objectives
 
-Project architecture already completed:
+This application is designed to implement:
 
-### Tech Setup Completed
+- Responsive hero section with navigation bar
+- Multi-card team/product display
+- Fully styled login/signup authentication pages
+- Complex responsive pricing table
+- Dark mode support using Tailwind theme classes
+- Standard dashboard application layout
+- Custom alert/notification components with transitions
 
-* Vite React project initialized
-* TailwindCSS configured
-* React Router installed
-* Dark mode custom variant configured in `index.css`
+---
+
+## Tech Stack
+
+- ReactJS
+- Vite
+- TailwindCSS
+- JavaScript (ES6+)
+- HTML5
+- React Router DOM
+
+---
+
+## Dark Mode Configuration
+
+Configured in `src/index.css`:
 
 ```css
 @import "tailwindcss";
@@ -27,9 +39,11 @@ Project architecture already completed:
 @custom-variant dark (&:where(.dark, .dark *));
 ```
 
+This enables class-based dark mode support across the application.
+
 ---
 
-### Folder Structure
+## Project Architecture
 
 ```bash
 src/
@@ -51,7 +65,6 @@ src/
 │       └── logo-dark.svg
 │
 ├── components/
-│   │
 │   ├── common/
 │   │   ├── Button.jsx
 │   │   ├── Input.jsx
@@ -162,86 +175,239 @@ src/
 
 ---
 
-### Completed Features
+## Completed Development Progress
 
-#### Step 1 — React Router Architecture
-
-Implemented:
-
-* BrowserRouter
-* Routes
-* Route
-* 404 page
-* separate route pages
-
-Routes:
-
-* `/`
-* `/pricing`
-* `/login`
-* `/signup`
-* `/dashboard`
-* `/settings`
-* `*`
-
----
-
-#### Step 2 — Layout Architecture with Nested Routes
+### Step 1 — React Router Architecture
 
 Implemented:
 
-* `MainLayout`
-* `AuthLayout`
-* `DashboardLayout`
-* `Outlet`
-* nested routes
+- BrowserRouter
+- Routes
+- Route definitions
+- 404 page handling
+- Separate route-based pages
 
-Architecture:
+Configured routes:
 
-* MainLayout → Home + Pricing
-* AuthLayout → Login + Signup
-* DashboardLayout → Dashboard + Settings
+- `/`
+- `/pricing`
+- `/login`
+- `/signup`
+- `/dashboard`
+- `/settings`
+- `*`
 
 ---
 
-#### Step 3 — Theme System
+### Step 2 — Layout Architecture
 
 Implemented:
 
-* ThemeContext
-* ThemeProvider
-* custom `useTheme()` hook
-* localStorage persistence
-* dark/light theme toggle
-* `ThemeToggle` component
-* dark mode working globally
+- `MainLayout`
+- `AuthLayout`
+- `DashboardLayout`
+- `Outlet`
+- Nested route architecture
+
+Layout mapping:
+
+- MainLayout → Home, Pricing
+- AuthLayout → Login, Signup
+- DashboardLayout → Dashboard, Settings
 
 ---
 
-#### Step 4 — Reusable UI Foundation
+### Step 3 — Theme System
+
+Implemented:
+
+- ThemeContext
+- ThemeProvider
+- `useTheme()` custom hook
+- localStorage persistence
+- global dark/light theme switching
+- reusable ThemeToggle component
+
+Features:
+
+- dark mode persists after refresh
+- class-based Tailwind dark mode
+- globally applied theme management
+
+---
+
+### Step 4 — Reusable UI Foundation
 
 Built reusable components:
 
-* Button
-* Input
-* Card
-* Badge
+- Button
+- Input
+- Card
+- Badge
 
-Home page currently used as test page for these reusable components.
+Purpose:
+
+These components form the shared design system used throughout the application.
 
 ---
 
-Now continue this project from **Step 5 onward** in a professional step-by-step teaching style.
+### Step 5 — Navigation System
 
-Requirements for teaching style:
+Implemented:
 
-* exact file path for every file
-* complete code (not partial snippets)
-* line-by-line explanation
-* best practices
-* scalable architecture
-* production-style React structure
+- Responsive Navbar
+- Mobile hamburger navigation
+- reusable NavLinks component
+- MobileMenu drawer
+- ThemeToggle integration
+- sticky navigation header
 
-Start with:
+Features:
 
-**Step 5 → Build Navbar + responsive mobile navigation**
+- desktop navigation
+- mobile responsive menu
+- active route highlighting
+- dark mode support
+- login/signup CTA buttons
+
+Files added:
+
+```bash
+src/components/navigation/Navbar.jsx
+src/components/navigation/NavLinks.jsx
+src/components/navigation/MobileMenu.jsx
+src/components/common/ThemeToggle.jsx
+```
+
+---
+
+### Step 6 — Hero Section
+
+Implemented:
+
+- SaaS landing hero section
+- Hero CTA buttons
+- Hero stats display
+- dashboard preview image integration
+
+Features:
+
+- responsive two-column layout
+- mobile-first stacking
+- dark mode support
+- reusable hero architecture
+
+Files added:
+
+```bash
+src/components/hero/Hero.jsx
+src/components/hero/HeroStats.jsx
+src/components/hero/HeroCTA.jsx
+```
+
+---
+
+### Step 7 — Team Section
+
+Implemented:
+
+- multi-card team display
+- reusable TeamCard architecture
+- data-driven rendering
+
+Features:
+
+- responsive card grid
+- 1 / 2 / 3 column scaling
+- dark mode support
+- avatar-based team presentation
+
+Files added:
+
+```bash
+src/components/team/TeamSection.jsx
+src/components/team/TeamGrid.jsx
+src/components/team/TeamCard.jsx
+src/data/teamData.js
+```
+
+---
+
+### Step 8 — Authentication Pages
+
+Implemented:
+
+- Login page
+- Signup page
+- reusable auth card layout
+- password visibility toggle
+- validation message component
+
+Features:
+
+- centered authentication UI
+- reusable form architecture
+- dark mode support
+- responsive layout
+
+Files added:
+
+```bash
+src/components/auth/LoginForm.jsx
+src/components/auth/SignupForm.jsx
+src/components/auth/AuthCard.jsx
+src/components/auth/PasswordInput.jsx
+src/components/auth/FormValidationMessage.jsx
+```
+
+Updated pages:
+
+```bash
+src/pages/Login.jsx
+src/pages/Signup.jsx
+```
+
+---
+
+## Current Progress Status
+
+Completed:
+
+- Routing
+- Layout architecture
+- Theme system
+- Reusable UI foundation
+- Navbar
+- Hero section
+- Team section
+- Authentication pages
+
+Pending:
+
+- Pricing table
+- Dashboard layout
+- Settings page
+- Notifications / alerts
+- Final polish
+
+---
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+Build production version:
+
+```bash
+npm run build
+```
