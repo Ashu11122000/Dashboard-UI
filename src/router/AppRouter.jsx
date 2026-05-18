@@ -15,30 +15,28 @@ import NotFound from "../pages/NotFound";
 function AppRouter() {
   return (
     <BrowserRouter>
-        <Routes>
-            {/* Main Website Layout */}
-            <Route element={<MainLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/pricing" element={<Pricing />} />
+      <Routes>
+        {/* Public Website Routes */}
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
 
-        {/* Auth Layout */}
+        {/* Authentication Routes */}
         <Route element={<AuthLayout />}>
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Route>
 
-        {/* Dashboard Layout */}
+        {/* Dashboard Routes */}
         <Route element={<DashboardLayout />}>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/settings" element={<Settings />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/settings" element={<Settings />} />
         </Route>
-
-        {/* 404 */}
-            <Route path="*" element={<NotFound />} />
-        </Routes>
+      </Routes>
     </BrowserRouter>
-    );
+  );
 }
 
 export default AppRouter;
