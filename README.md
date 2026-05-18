@@ -1,16 +1,158 @@
-# React + Vite
+I am building a capstone frontend project using **ReactJS + Vite + TailwindCSS + JavaScript + HTML5**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project idea: **SaaS Dashboard Web Application** that combines all assignment requirements into one professional project.
 
-Currently, two official plugins are available:
+Assignment requirements:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Responsive hero section + navigation bar
+* Multi-card product/team display
+* Fully styled login/signup form
+* Complex responsive pricing table
+* Dark mode feature using theme classes
+* Standard application dashboard layout
+* Custom alert/notification component with transitions
 
-## React Compiler
+Project architecture already completed:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Tech Setup Completed
 
-## Expanding the ESLint configuration
+* Vite React project initialized
+* TailwindCSS configured
+* React Router installed
+* Dark mode custom variant configured in `index.css`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```css
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+```
+
+---
+
+### Folder Structure
+
+```bash
+src/
+ ├── assets/
+ ├── components/
+ │   └── common/
+ │       ├── Button.jsx
+ │       ├── Input.jsx
+ │       ├── Card.jsx
+ │       └── Badge.jsx
+ │
+ ├── pages/
+ │   ├── Home.jsx
+ │   ├── Login.jsx
+ │   ├── Signup.jsx
+ │   ├── Pricing.jsx
+ │   ├── Dashboard.jsx
+ │   ├── Settings.jsx
+ │   └── NotFound.jsx
+ │
+ ├── layouts/
+ │   ├── MainLayout.jsx
+ │   ├── AuthLayout.jsx
+ │   └── DashboardLayout.jsx
+ │
+ ├── hooks/
+ │   └── useTheme.js
+ │
+ ├── context/
+ │   └── ThemeContext.jsx
+ │
+ ├── router/
+ │   └── AppRouter.jsx
+ │
+ ├── utils/
+ ├── data/
+ ├── App.jsx
+ ├── main.jsx
+ └── index.css
+```
+
+---
+
+### Completed Features
+
+#### Step 1 — React Router Architecture
+
+Implemented:
+
+* BrowserRouter
+* Routes
+* Route
+* 404 page
+* separate route pages
+
+Routes:
+
+* `/`
+* `/pricing`
+* `/login`
+* `/signup`
+* `/dashboard`
+* `/settings`
+* `*`
+
+---
+
+#### Step 2 — Layout Architecture with Nested Routes
+
+Implemented:
+
+* `MainLayout`
+* `AuthLayout`
+* `DashboardLayout`
+* `Outlet`
+* nested routes
+
+Architecture:
+
+* MainLayout → Home + Pricing
+* AuthLayout → Login + Signup
+* DashboardLayout → Dashboard + Settings
+
+---
+
+#### Step 3 — Theme System
+
+Implemented:
+
+* ThemeContext
+* ThemeProvider
+* custom `useTheme()` hook
+* localStorage persistence
+* dark/light theme toggle
+* `ThemeToggle` component
+* dark mode working globally
+
+---
+
+#### Step 4 — Reusable UI Foundation
+
+Built reusable components:
+
+* Button
+* Input
+* Card
+* Badge
+
+Home page currently used as test page for these reusable components.
+
+---
+
+Now continue this project from **Step 5 onward** in a professional step-by-step teaching style.
+
+Requirements for teaching style:
+
+* exact file path for every file
+* complete code (not partial snippets)
+* line-by-line explanation
+* best practices
+* scalable architecture
+* production-style React structure
+
+Start with:
+
+**Step 5 → Build Navbar + responsive mobile navigation**
