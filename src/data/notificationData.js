@@ -1,0 +1,42 @@
+export const notificationsData = [
+  {
+    id: 1,
+    title: "New user signed up",
+    message: "A new user created an account 5 minutes ago.",
+    type: "info",
+    time: "5 min ago",
+    read: false,
+  },
+  {
+    id: 2,
+    title: "Payment received",
+    message: "Monthly subscription payment received successfully.",
+    type: "success",
+    time: "20 min ago",
+    read: false,
+  },
+  {
+    id: 3,
+    title: "Server warning",
+    message: "API response time is higher than normal.",
+    type: "warning",
+    time: "1 hour ago",
+    read: true,
+  },
+  {
+    id: 4,
+    title: "Task completed",
+    message: "Weekly analytics report has been generated.",
+    type: "success",
+    time: "2 hours ago",
+    read: true,
+  },
+  {
+    id: 5,
+    title: "Security alert",
+    message: "Password changed successfully.",
+    type: "info",
+    time: "Yesterday",
+    read: true,
+  },
+];

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Loader from "../components/common/Loader";
 import DashboardStats from "../components/dashboard/DashboardStats";
 import ActivityFeed from "../components/dashboard/ActivityFeed";
+import AnalyticsChart from "../components/dashboard/AnalyticsChart";
 import TaskList from "../components/dashboard/TaskList";
 
 export default function Dashboard() {
@@ -22,6 +23,7 @@ export default function Dashboard() {
   return (
     <div className="space-y-6">
       <DashboardStats />
+      <AnalyticsChart />
       <ActivityFeed />
       <TaskList />
     </div>
