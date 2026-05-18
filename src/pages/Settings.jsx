@@ -1,9 +1,33 @@
-function Settings() {
-    return (
-        <div>
-            <h1>Settings Page</h1>
-        </div>
-    );
-}
+import { useState } from "react";
+import Button from "../components/common/Button";
+import Alert from "../components/common/Alert";
+import useToast from "../hooks/useToast";
 
-export default Settings;
+export default function Settings() {
+  const [saved, setSaved] = useState(false);
+  const { showToast } = useToast();
+
+  const handleSave = () => {
+    setSaved(true);
+    showToast("Settings saved successfully", "success");
+
+    setTimeout(() => {
+      setSaved(false);
+    }, 4000);
+  };
+
+  return (
+    <div className="space-y-6">
+      {saved && (
+        <Alert
+          type="success"
+          message="Your settings were updated successfully."
+        />
+      )}
+
+      <Button onClick={handleSave}>
+        Save Changes
+      </Button>
+    </div>
+  );
+}

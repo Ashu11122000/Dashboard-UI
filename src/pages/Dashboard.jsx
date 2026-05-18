@@ -1,38 +1,29 @@
+import { useEffect, useState } from "react";
+import Loader from "../components/common/Loader";
 import DashboardStats from "../components/dashboard/DashboardStats";
 import ActivityFeed from "../components/dashboard/ActivityFeed";
 import TaskList from "../components/dashboard/TaskList";
-import RecentUsersTable from "../components/dashboard/RecentUserTable";
 
-function Dashboard() {
+export default function Dashboard() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader fullScreen text="Loading dashboard..." />;
+  }
+
   return (
-    <div className="space-y-8">
-      {/* Header */}
-      <section>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          Welcome back, Ashish 👋
-        </h1>
-
-        <p className="mt-2 text-gray-600 dark:text-gray-300">
-          Here’s what’s happening with your SaaS platform today.
-        </p>
-      </section>
-
-      {/* KPI Stats */}
+    <div className="space-y-6">
       <DashboardStats />
-
-      {/* Middle Widgets */}
-      <section className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-        <div className="lg:col-span-2">
-          <ActivityFeed />
-        </div>
-
-        <TaskList />
-      </section>
-
-      {/* Users Table */}
-      <RecentUsersTable />
+      <ActivityFeed />
+      <TaskList />
     </div>
   );
 }
-
-export default Dashboard;
