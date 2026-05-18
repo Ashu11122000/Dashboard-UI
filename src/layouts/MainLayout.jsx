@@ -1,21 +1,14 @@
 import { Outlet } from "react-router-dom";
-import ThemeToggle from "../components/common/ThemeToggle";
+import Navbar from "../components/navigation/Navbar";
 
 function MainLayout() {
   return (
-    <div className="min-h-screen bg-white text-black dark:bg-slate-900 dark:text-white transition-colors duration-300">
-      <header className="p-4 border-b flex justify-between items-center dark:border-slate-700">
-        <h2>Main Layout Navbar</h2>
-        <ThemeToggle />
-      </header>
+    <div className="min-h-screen bg-white dark:bg-gray-950">
+      <Navbar />
 
-      <main className="p-6">
+      <main>
         <Outlet />
       </main>
-
-      <footer className="p-4 border-t dark:border-slate-700">
-        <p>Main Footer</p>
-      </footer>
     </div>
   );
 }

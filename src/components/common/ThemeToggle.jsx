@@ -6,9 +6,23 @@ function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="px-4 py-2 rounded-lg border bg-white text-black dark:bg-slate-800 dark:text-white"
+      className="
+        px-3
+        py-2
+        rounded-lg
+        text-sm
+        font-medium
+        transition
+        border
+        border-gray-300
+        text-gray-700
+        hover:bg-gray-100
+        dark:border-gray-300
+        dark:text-white
+        dark:hover:bg-gray-800
+      " 
     >
-      {theme === "light" ? "Dark Mode" : "Light Mode"}
+      {theme === "light" ? "Dark" : "Light"}
     </button>
   );
 }
