@@ -1,15 +1,10 @@
-import { createContext, useEffect, useState } from "react";
-
-const ThemeContext = createContext();
+import { useEffect, useState } from "react";
+import ThemeContext from "./theme-context";
 
 function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
-
-    if (savedTheme) {
-      return savedTheme;
-    }
-    return "light";
+    return savedTheme || "light";
   });
 
   useEffect(() => {
@@ -20,7 +15,9 @@ function ThemeProvider({ children }) {
   }, [theme]);
 
   function toggleTheme() {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setTheme((prevTheme) =>
+      prevTheme === "light" ? "dark" : "light"
+    );
   }
 
   return (
