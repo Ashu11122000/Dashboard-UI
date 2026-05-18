@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Button from "../components/common/Button";
 import Alert from "../components/common/Alert";
-import useToast from "../hooks/useToast";
+import useToastContext from "../hooks/useToastContext";
 
 export default function Settings() {
   const [saved, setSaved] = useState(false);
-  const { showToast } = useToast();
+  const { showToast } = useToastContext();
 
   const handleSave = () => {
     setSaved(true);
