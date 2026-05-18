@@ -1,12 +1,8 @@
+import AppRouter from "./router/AppRouter"
+
 function App() {
 
-  return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 text-black dark:text-white flex items-center justify-center">
-      <h1 className="text-4xl font-bold">
-        Hello World!
-      </h1>
-    </div>
-  )
+  return <AppRouter />
 }
 
-export default App
+export default App;
