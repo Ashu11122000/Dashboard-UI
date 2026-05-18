@@ -33,42 +33,131 @@ Project architecture already completed:
 
 ```bash
 src/
- ├── assets/
- ├── components/
- │   └── common/
- │       ├── Button.jsx
- │       ├── Input.jsx
- │       ├── Card.jsx
- │       └── Badge.jsx
- │
- ├── pages/
- │   ├── Home.jsx
- │   ├── Login.jsx
- │   ├── Signup.jsx
- │   ├── Pricing.jsx
- │   ├── Dashboard.jsx
- │   ├── Settings.jsx
- │   └── NotFound.jsx
- │
- ├── layouts/
- │   ├── MainLayout.jsx
- │   ├── AuthLayout.jsx
- │   └── DashboardLayout.jsx
- │
- ├── hooks/
- │   └── useTheme.js
- │
- ├── context/
- │   └── ThemeContext.jsx
- │
- ├── router/
- │   └── AppRouter.jsx
- │
- ├── utils/
- ├── data/
- ├── App.jsx
- ├── main.jsx
- └── index.css
+│
+├── assets/
+│   ├── images/
+│   │   ├── hero-dashboard.png
+│   │   ├── login-illustration.svg
+│   │   ├── pricing-bg.jpg
+│   │   ├── avatar-1.png
+│   │   ├── avatar-2.png
+│   │   └── avatar-3.png
+│   │
+│   ├── icons/
+│   │   └── custom-icons.svg
+│   │
+│   └── logos/
+│       ├── logo-light.svg
+│       └── logo-dark.svg
+│
+├── components/
+│   │
+│   ├── common/
+│   │   ├── Button.jsx
+│   │   ├── Input.jsx
+│   │   ├── Card.jsx
+│   │   ├── Modal.jsx
+│   │   ├── Loader.jsx
+│   │   ├── Toast.jsx
+│   │   ├── Alert.jsx
+│   │   ├── Badge.jsx
+│   │   ├── ThemeToggle.jsx
+│   │   └── EmptyState.jsx
+│   │
+│   ├── navigation/
+│   │   ├── Navbar.jsx
+│   │   ├── MobileMenu.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── Topbar.jsx
+│   │   └── NavLinks.jsx
+│   │
+│   ├── hero/
+│   │   ├── Hero.jsx
+│   │   ├── HeroStats.jsx
+│   │   └── HeroCTA.jsx
+│   │
+│   ├── features/
+│   │   ├── FeatureSection.jsx
+│   │   ├── FeatureCard.jsx
+│   │   └── FeatureGrid.jsx
+│   │
+│   ├── pricing/
+│   │   ├── PricingSection.jsx
+│   │   ├── PricingCard.jsx
+│   │   ├── PricingToggle.jsx
+│   │   └── PricingFeatures.jsx
+│   │
+│   ├── auth/
+│   │   ├── LoginForm.jsx
+│   │   ├── SignupForm.jsx
+│   │   ├── AuthCard.jsx
+│   │   ├── PasswordInput.jsx
+│   │   └── FormValidationMessage.jsx
+│   │
+│   ├── dashboard/
+│   │   ├── DashboardStats.jsx
+│   │   ├── StatCard.jsx
+│   │   ├── ActivityFeed.jsx
+│   │   ├── RecentUsersTable.jsx
+│   │   ├── TaskList.jsx
+│   │   ├── AnalyticsChart.jsx
+│   │   ├── QuickActions.jsx
+│   │   └── NotificationsPanel.jsx
+│   │
+│   └── team/
+│       ├── TeamSection.jsx
+│       ├── TeamCard.jsx
+│       └── TeamGrid.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   ├── Signup.jsx
+│   ├── Dashboard.jsx
+│   ├── Pricing.jsx
+│   ├── NotFound.jsx
+│   └── Settings.jsx
+│
+├── layouts/
+│   ├── MainLayout.jsx
+│   ├── AuthLayout.jsx
+│   └── DashboardLayout.jsx
+│
+├── hooks/
+│   ├── useTheme.js
+│   ├── useLocalStorage.js
+│   ├── useToast.js
+│   ├── useForm.js
+│   ├── useWindowSize.js
+│   └── useToggle.js
+│
+├── context/
+│   ├── ThemeContext.jsx
+│   ├── AuthContext.jsx
+│   ├── ToastContext.jsx
+│   └── DashboardContext.jsx
+│
+├── utils/
+│   ├── constants.js
+│   ├── helpers.js
+│   ├── validators.js
+│   ├── formatters.js
+│   └── storage.js
+│
+├── data/
+│   ├── featuresData.js
+│   ├── pricingData.js
+│   ├── teamData.js
+│   ├── dashboardStats.js
+│   ├── tasksData.js
+│   └── notificationsData.js
+│
+├── router/
+│   └── AppRouter.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
 ```
 
 ---
