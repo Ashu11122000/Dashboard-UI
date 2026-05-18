@@ -1,4 +1,5 @@
 import Hero from "../components/hero/Hero";
+import PricingSection from "../components/pricing/PricingSection";
 import TeamSection from "../components/team/TeamSection";
 
 function Home() {
@@ -6,6 +7,7 @@ function Home() {
     <main>
       <Hero />
       <TeamSection />
+      <PricingSection />
     </main>
   );
 }
