@@ -1,20 +1,19 @@
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import ThemeToggle from "../components/common/ThemeToggle";
+import Sidebar from "../components/navigation/Sidebar";
+import Topbar from "../components/navigation/Topbar";
 
 function DashboardLayout() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="min-h-screen flex bg-white text-black dark:bg-slate-900 dark:text-white transition-colors duration-300">
-      <aside className="w-64 bg-slate-900 text-white p-6">
-        <h2>Dashboard Sidebar</h2>
-      </aside>
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-950">
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
-      <div className="flex-1">
-        <header className="p-4 border-b bg-white dark:bg-slate-800 dark:border-slate-700 flex justify-between">
-          <h2>Dashboard Topbar</h2>
-          <ThemeToggle />
-        </header>
+      <div className="lg:ml-64">
+        <Topbar setIsOpen={setIsOpen} />
 
-        <main className="p-6 bg-slate-50 dark:bg-slate-950 min-h-[calc(100vh-64px)]">
+        <main className="p-6">
           <Outlet />
         </main>
       </div>

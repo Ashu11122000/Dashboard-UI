@@ -1,16 +1,196 @@
-# React + Vite
+# SaaS Dashboard Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A capstone frontend project built using **ReactJS, Vite, TailwindCSS, JavaScript, and HTML5**.
 
-Currently, two official plugins are available:
+This project combines multiple frontend assignment requirements into one professional SaaS dashboard application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project Objectives
 
-## React Compiler
+This application is designed to implement:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Responsive hero section with navigation bar
+- Multi-card team/product display
+- Fully styled login/signup authentication pages
+- Complex responsive pricing table
+- Dark mode support using Tailwind theme classes
+- Standard dashboard application layout
+- Custom alert/notification components with transitions
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- ReactJS
+- Vite
+- TailwindCSS
+- JavaScript (ES6+)
+- HTML5
+- React Router DOM
+
+---
+
+## Dark Mode Configuration
+
+Configured in `src/index.css`:
+
+```css
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+```
+
+This enables class-based dark mode support across the application.
+
+---
+
+## Project Architecture
+
+```bash
+src/
+│
+├── assets/
+│   ├── images/
+│   │   ├── hero-dashboard.png
+│   │   ├── login-illustration.svg
+│   │   ├── pricing-bg.jpg
+│   │   ├── avatar-1.png
+│   │   ├── avatar-2.png
+│   │   └── avatar-3.png
+│   │
+│   ├── icons/
+│   │   └── custom-icons.svg
+│   │
+│   └── logos/
+│       ├── logo-light.svg
+│       └── logo-dark.svg
+│
+├── components/
+│   ├── common/
+│   │   ├── Button.jsx
+│   │   ├── Input.jsx
+│   │   ├── Card.jsx
+│   │   ├── Modal.jsx
+│   │   ├── Loader.jsx
+│   │   ├── Toast.jsx
+│   │   ├── Alert.jsx
+│   │   ├── Badge.jsx
+│   │   ├── ThemeToggle.jsx
+│   │   └── EmptyState.jsx
+│   │
+│   ├── navigation/
+│   │   ├── Navbar.jsx
+│   │   ├── MobileMenu.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── Topbar.jsx
+│   │   └── NavLinks.jsx
+│   │
+│   ├── hero/
+│   │   ├── Hero.jsx
+│   │   ├── HeroStats.jsx
+│   │   └── HeroCTA.jsx
+│   │
+│   ├── features/
+│   │   ├── FeatureSection.jsx
+│   │   ├── FeatureCard.jsx
+│   │   └── FeatureGrid.jsx
+│   │
+│   ├── pricing/
+│   │   ├── PricingSection.jsx
+│   │   ├── PricingCard.jsx
+│   │   ├── PricingToggle.jsx
+│   │   └── PricingFeatures.jsx
+│   │
+│   ├── auth/
+│   │   ├── LoginForm.jsx
+│   │   ├── SignupForm.jsx
+│   │   ├── AuthCard.jsx
+│   │   ├── PasswordInput.jsx
+│   │   └── FormValidationMessage.jsx
+│   │
+│   ├── dashboard/
+│   │   ├── DashboardStats.jsx
+│   │   ├── StatCard.jsx
+│   │   ├── ActivityFeed.jsx
+│   │   ├── RecentUsersTable.jsx
+│   │   ├── TaskList.jsx
+│   │   ├── AnalyticsChart.jsx
+│   │   ├── QuickActions.jsx
+│   │   └── NotificationsPanel.jsx
+│   │
+│   └── team/
+│       ├── TeamSection.jsx
+│       ├── TeamCard.jsx
+│       └── TeamGrid.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   ├── Signup.jsx
+│   ├── Dashboard.jsx
+│   ├── Pricing.jsx
+│   ├── NotFound.jsx
+│   └── Settings.jsx
+│
+├── layouts/
+│   ├── MainLayout.jsx
+│   ├── AuthLayout.jsx
+│   └── DashboardLayout.jsx
+│
+├── hooks/
+│   ├── useTheme.js
+│   ├── useLocalStorage.js
+│   ├── useToast.js
+│   ├── useForm.js
+│   ├── useWindowSize.js
+│   └── useToggle.js
+│
+├── context/
+│   ├── ThemeContext.jsx
+│   ├── AuthContext.jsx
+│   ├── ToastContext.jsx
+│   └── DashboardContext.jsx
+│
+├── utils/
+│   ├── constants.js
+│   ├── helpers.js
+│   ├── validators.js
+│   ├── formatters.js
+│   └── storage.js
+│
+├── data/
+│   ├── featuresData.js
+│   ├── pricingData.js
+│   ├── teamData.js
+│   ├── dashboardStats.js
+│   ├── tasksData.js
+│   └── notificationsData.js
+│
+├── router/
+│   └── AppRouter.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+Build production version:
+
+```bash
+npm run build
+```
